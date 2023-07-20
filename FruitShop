@@ -1,0 +1,48 @@
+import java.util.Scanner;
+
+public class FruitShop {
+    public static void main(String[] args) {
+
+        Scanner scanner = new Scanner(System.in);
+
+        String fruit = scanner.nextLine();
+        String day = scanner.nextLine();
+        double quantity = Double.parseDouble(scanner.nextLine());
+
+        double totalPrice = 0;
+        
+        if (day.equals("Monday") || day.equals("Tuesday") || day.equals("Wednesday")||day.equals("Thursday")|| day.equals("Friday")){
+            if (fruit.equals("banana")){
+                totalPrice = 2.50 * quantity;
+            }else if (fruit.equals("apple")){
+               totalPrice = 1.20 * quantity;
+            }else if (fruit.equals("orange")){
+                totalPrice = 0.85 * quantity;
+            }else if (fruit.equals("grape")){
+                totalPrice = 1.45 * quantity;
+            }else if (fruit.equals("kiwi")){
+                totalPrice = 2.70 * quantity;
+            }else if (fruit.equals("pineapple")){
+                totalPrice = 5.50 * quantity;
+            }else if (fruit.equals("grapes")){
+                totalPrice = 3.85 * quantity;
+            }
+        }else if (day.equals("Saturday")||day.equals("Sunday")){
+            if (fruit.equals("banana")){
+                totalPrice = 2.70 * quantity;
+            }else if (fruit.equals("apple")){
+                totalPrice = 1.25 * quantity;
+            }else if (fruit.equals("orange")){
+                totalPrice = 0.90 * quantity;
+            }else if (fruit.equals("grape")){
+                totalPrice = 1.60 * quantity;
+            }else if (fruit.equals("kiwi")){
+                totalPrice = 3.00 * quantity;
+            }else if (fruit.equals("pineapple")){
+                totalPrice = 5.60 * quantity;
+            }else if (fruit.equals("grapes")){
+                totalPrice = 4.20 * quantity;
+            }
+        }System.out.printf("%.2f",totalPrice);
+        }
+    }
